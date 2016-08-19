@@ -49,8 +49,8 @@ function createMap() {
                 noWrap: true,
                 ext: 'png'
             })],
-        zoom: 2,
-        maxZoom: 2,
+        zoom: 4,
+        maxZoom: 3,
         minZoom: 2,
         zoomControl: false,
         center: [49, 2.5],
@@ -72,6 +72,9 @@ function createMap() {
 
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend');
+        div.innerHTML += '<strong>Controls:</strong><br>';
+        div.innerHTML += 'Click to add <img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" alt="Your answer"/><br>';
+        div.innerHTML += 'Drag to scroll<hr>';
         div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" alt="Your answer"/> Your answer<br>';
         div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" alt="Correct answer"/> Correct answer<br>';
         div.innerHTML += '<img height="20" width="12" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" alt="Best answer"/> Closest answer<br>';

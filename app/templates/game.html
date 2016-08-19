@@ -14,53 +14,44 @@
 {% endblock %}
 {% block content %}
 
-    <a href="https://github.com/abrenaut/posio"><img style="position: absolute; top: 0; right: 0; border: 0;"
-                                                     src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
-                                                     alt="Fork me on GitHub"
-                                                     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
+    <!-- Leaflet map -->
+    <div id="map"></div>
+    
     <!-- Game rules -->
     <div id="game_rules">You'll be given a list of cities that you must locate by clicking on the map</div>
 
     <!-- Progress bar -->
     <div id="progress" class="progress" data-max-response-time="{{ MAX_RESPONSE_TIME }}"></div>
 
-    <!-- Leaflet map -->
-    <div id="map"></div>
-
     <!-- Leaderboard -->
     <div id="leaderboard">
-
-        <h3>Leaderboard (based on the last {{ LEADERBOARD_ANSWER_COUNT }} turns)</h3>
-
         <table>
-            <tr>
-                <th>
-                    Rank
-                </th>
-                <th>
-                    Player
-                </th>
-                <th>
-                    Score
-                </th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>
+                        Rank
+                    </th>
+                    <th>
+                        Player
+                    </th>
+                    <th>
+                        Score
+                    </th>
+                </tr>
+            </thead>
         </table>
-
     </div>
 
     <!-- Login modal -->
     <div id="loginModal" style="display:none;">
-
         <form id="loginForm">
             <div>
-                <input id="playerName" type="text" placeholder="Name your player"
-                                                   name="playerName">
+                <input id="playerName" type="text" placeholder="Name your player" name="playerName">
                 <input class="btn btn-default" type="submit" value="Play">
             </div>
         </form>
         <p id="loginError"></p>
-
     </div>
 
 {% endblock %}

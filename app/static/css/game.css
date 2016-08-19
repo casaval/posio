@@ -1,5 +1,7 @@
 html, body, #map {
-    height: 90%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .progress {
@@ -11,10 +13,45 @@ html, body, #map {
     display: block;
 }
 
+#map {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 #game_rules {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
     color: #333;
     height: 2em;
     text-align: center;
+    color: white;
+    background-color: rgba(5,5,5,0.4);
+    text-shadow: #000;
+    width: 25%;
+}
+
+
+#progress {
+    z-index: 3;
+    position: absolute;
+    top: 10px;
+    background-color: rgba(5,5,5,0.4);
+    color: white;
+    width: 70%;
+}
+
+#leaderboard {
+    z-index: 3;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: 80%;
 }
 
 .leaflet-container {
@@ -48,7 +85,7 @@ html, body, #map {
 
 .info {
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
+    font: 12px/14px Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -67,5 +104,6 @@ tbody tr.user_score {
 }
 
 #loginForm {
+    z-index: 2;
     text-align: center;
 }
