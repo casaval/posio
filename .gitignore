@@ -90,3 +90,7 @@ ENV/
 
 # Test config
 test_config.py
+
+# Cloud 9
+.c9
+.~c9*
